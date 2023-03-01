@@ -1,0 +1,11 @@
+{
+	"connector": {
+		"login": "ANS login",
+		"logout": "Logout",
+		"swal": {
+			"title": "Install ArConnect to continue",
+			"text": "This Dapp uses ArConnect to make it easier to broadcast Arweave transactions",
+			"footer": "Download ArConnect here"
+		}
+	}
+}
