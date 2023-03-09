@@ -42,6 +42,7 @@ export declare const defaultAlgorithmParams: {
     saltLength: number;
 };
 export declare const ANS_URL = "https://ans-resolver.herokuapp.com/resolve-as-arpage/";
+export declare const ArConnectAllPermissions: PermissionType[];
 export declare const ArconnectContext: React.Context<Partial<ArconnectContextInterface>>;
 export declare function useArconnect(): Partial<ArconnectContextInterface>;
 declare type Props = {

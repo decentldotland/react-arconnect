@@ -55,7 +55,7 @@ export interface ArconnectContextInterface {
   encrypt: encryptInterface;
   decrypt: decryptInterface;
   shortenAddress: (address: string) => string;
-};
+}
 
 export const defaultSignatureParams = { name: 'RSA-PSS', saltLength: 32 };
 export const defaultAlgorithmParams = {
@@ -65,6 +65,18 @@ export const defaultAlgorithmParams = {
 };
 
 export const ANS_URL = 'https://ans-resolver.herokuapp.com/resolve-as-arpage/';
+
+export const ArConnectAllPermissions: PermissionType[] = [
+  'ACCESS_ADDRESS',
+  'ACCESS_PUBLIC_KEY',
+  'ACCESS_ALL_ADDRESSES',
+  'SIGN_TRANSACTION',
+  'ENCRYPT',
+  'DECRYPT',
+  'SIGNATURE',
+  'ACCESS_ARWEAVE_CONFIG',
+  'DISPATCH',
+];
 
 export const ArconnectContext = createContext<
   Partial<ArconnectContextInterface>
@@ -105,7 +117,7 @@ export const ArconnectProvider = (props: Props) => {
     try {
       if (!window.arweaveWallet)
         throw new Error('No ArConnect wallet detected');
-      if (permissions.length === 0 || !permissions.includes('ACCESS_ADDRESS'))
+      if (permissions.length === 0 || !permissions?.includes('ACCESS_ADDRESS'))
         throw new Error(
           'ArConnect requires ACCESS_ADDRESS permission to connect'
         );

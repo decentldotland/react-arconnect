@@ -415,6 +415,7 @@ var defaultAlgorithmParams = {
   saltLength: 32
 };
 var ANS_URL = 'https://ans-resolver.herokuapp.com/resolve-as-arpage/';
+var ArConnectAllPermissions = ['ACCESS_ADDRESS', 'ACCESS_PUBLIC_KEY', 'ACCESS_ALL_ADDRESSES', 'SIGN_TRANSACTION', 'ENCRYPT', 'DECRYPT', 'SIGNATURE', 'ACCESS_ARWEAVE_CONFIG', 'DISPATCH'];
 var ArconnectContext = /*#__PURE__*/React.createContext({});
 function useArconnect() {
   var useArconnectContext = React.useContext(ArconnectContext);
@@ -459,7 +460,7 @@ var ArconnectProvider = function ArconnectProvider(props) {
               throw new Error('No ArConnect wallet detected');
 
             case 3:
-              if (!(permissions.length === 0 || !permissions.includes('ACCESS_ADDRESS'))) {
+              if (!(permissions.length === 0 || !(permissions != null && permissions.includes('ACCESS_ADDRESS')))) {
                 _context.next = 5;
                 break;
               }
@@ -1003,6 +1004,7 @@ var ArconnectProvider = function ArconnectProvider(props) {
 };
 
 exports.ANS_URL = ANS_URL;
+exports.ArConnectAllPermissions = ArConnectAllPermissions;
 exports.ArconnectContext = ArconnectContext;
 exports.ArconnectProvider = ArconnectProvider;
 exports.defaultAlgorithmParams = defaultAlgorithmParams;
