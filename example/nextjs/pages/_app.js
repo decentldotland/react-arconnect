@@ -1,7 +1,13 @@
-import "../styles/globals.css"
+import "../styles/globals.css";
+import { ArconnectProvider } from "react-arconnect";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function ExampleApp({ Component, pageProps }) {
+  return (
+    <ArconnectProvider>
+      <Component {...pageProps} />
+    </ArconnectProvider>
+
+  ) 
 }
 
-export default MyApp
+export default ExampleApp;

@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ans-for-all": "link:../..",
-    "next": "12.1.6",
-    "react": "link:../../node_modules/react",
-    "react-dom": "link:../../node_modules/react-dom"
+    "react-arconnect": "link:../..",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
