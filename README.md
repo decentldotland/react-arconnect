@@ -2,7 +2,7 @@
   <a href="https://decent.land">
     <img src="./img/logo.png" height="124">
   </a>
-  <h3 align="center"><code>@decentdotland/react-arconnect</code></h3>
+  <h3 align="center"><code>@decentldotland/react-arconnect</code></h3>
   <p align="center">React Arconnect</p>
 </p>
 
@@ -11,7 +11,7 @@
 Add it to your project:
 
 ```console
-yarn add @decentdotland/react-arconnect
+yarn add decentdotland/react-arconnect
 ```
 
 ### How to use react-arconnect in your React app:
