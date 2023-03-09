@@ -44,7 +44,7 @@ This is the provider component. It should be placed above all components using `
 ### useArconnect
 
 This is the hook to be used throughout the app. It returns an object containing: 
-  - [walletPermissions] (#walletPermissions)
+  - [walletPermissions](#walletPermissions)
   - [walletConnected](#walletconnected)
   - [address](#address)
   - [ANS](#ANS)
